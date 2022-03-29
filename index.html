@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>* {
+        margin:0;
+        padding:0;
+        }
+        
+        
+        .wrapper {
+        margin-left:22%; 
+        margin-right:20%; 
+
+        display:block;
+        border: solid;
+        border-color: black;
+        }
+
+        .row {
+        margin-left:22%; 
+        margin-right:20%; 
+
+        /* display:block;
+        border: solid;
+        border-color: black; */
+        }
+
+        .col {
+
+        display:inline-block;
+
+
+        }
+
+        h1{
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        ul {
+        list-style:none;
+        display:inline-block;
+        }
+        
+        .dot,
+        ul li {
+        width:5em;
+        height:5em;
+        margin:1px;
+        }
+        
+        .dot {
+        background:#ccc;
+        border-radius:0%;
+          cursor:pointer;
+        }
+        
+        .quadrado {
+        background:#000;
+        border-radius:0%;
+        
+        }
+
+        .selectedValue{
+            border: solid;
+            border-color: greenyellow
+        }
+       /*  body{
+          background:#fff;
+          animation:bgfade 5s;
+          -webkit-animation:bgfade 5s; /* Safari and Chrome }
+        
+        @keyframes bgfade
+        {
+        0%   {opacity:0;}
+        25%  {opacity:0.25;}
+        50%  {opacity:0.5;}
+        75%  {opacity:0.75;}
+        100% {opacity:1;}
+        }
+        
+        @-webkit-keyframes bgfade /* Safari and Chrome 
+        {
+        0%   {opacity:0;}
+        25%  {opacity:0.25;}
+        50%  {opacity:0.5;}
+        75%  {opacity:0.75;}
+        100% {opacity:1;} 
+        } */
+        </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="wrapper">
+        <ul class="row1">
+        <li class="dot game-square" style="border-left: solid; border-top: solid; border-color: black;" ></li>
+        <li class="dot game-square" style="border-left: solid;" ></li>
+        <li class="dot game-square" style="border-left: solid; border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square"style="border-left: solid; border-top: solid; border-color: black;"></li>
+        <li class="dot game-square"style="border-left: solid;"  ></li>
+        <li class="dot game-square" style="border-left: solid; border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square"style="border-left: solid; border-top: solid; border-color: black;"></li>
+        <li class="dot game-square"style="border-left: solid;" ></li>
+        <li class="dot game-square" style="border-left: solid; border-bottom: solid; border-color: black;"><h1 style="color: #ccc;">E</h1></li>
+        </ul>
+        <ul>
+        <li class="dot game-square" style="border-top: solid; border-color: black;"></li>
+        <li class="dot game-square"></li>
+        <li class="dot game-square" style="border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square"style="border-top: solid; border-color: black;"></li>
+        <li class="dot game-square"></li>
+        <li class="dot game-square" style="border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square"style="border-top: solid; border-color: black;"></li>
+        <li class="dot game-square"></li>
+        <li class="dot game-square" style="border-bottom: solid; border-color: black;"><h1 style="color: #ccc;">E</h1></li>
+        </ul>
+        <ul>
+        <li class="dot game-square" style="border-right: solid; border-top: solid; border-color: black;"></li>
+        <li class="dot game-square"style="border-right: solid; border-color: black;"></li>
+        <li class="dot game-square"style="border-right: solid; border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-right: solid; border-top: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-right: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-right: solid; border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-right: solid; border-top: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-right: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-right: solid; border-bottom: solid; border-color: black;"><h1 style="color: #ccc;">E</h1></li>
+        </ul>
+        <ul>
+        <li class="dot game-square" style="border-left: solid; border-top: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-top: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-top: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-bottom: solid; border-color: black;"><h1 style="color: #ccc;">E</h1></li>
+        </ul>
+          <ul>
+        <li class="dot game-square" style="border-top: solid; border-color: black;"></li>
+        <li class="dot game-square"></li>
+        <li class="dot game-square" style="border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square"style="border-top: solid; border-color: black;"></li>
+        <li class="dot game-square"></li>
+        <li class="dot game-square"style="border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square"style="border-top: solid; border-color: black;"></li>
+        <li class="dot game-square"></li>
+        <li class="dot game-square" style="border-bottom: solid; border-color: black;"><h1 style="color: #ccc;">E</h1></li>
+        </ul>
+          <ul>
+        <li class="dot game-square" style="border-right: solid; border-top: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-right: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-right: solid; border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-right: solid; border-top: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-right: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-right: solid; border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-right: solid; border-top: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-right: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-right: solid; border-bottom: solid; border-color: black;"><h1 style="color: #ccc;">E</h1></li>
+        </ul>
+          <ul>
+        <li class="dot game-square" style="border-left: solid; border-top: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-top: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-top: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-left: solid; border-bottom: solid; border-color: black;"><h1 style="color: #ccc;">E</h1></li>
+        </ul>
+          <ul>
+        <li class="dot game-square" style="border-top: solid; border-color: black;"></li>
+        <li class="dot game-square"></li>
+        <li class="dot game-square" style="border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-top: solid; border-color: black;"></li>
+        <li class="dot game-square"></li>
+        <li class="dot game-square" style="border-bottom: solid; border-color: black;"></li>
+        <li class="dot game-square" style="border-top: solid; border-color: black;"></li>
+        <li class="dot game-square"></li>
+        <li class="dot game-square" style="border-bottom: solid; border-color: black;"><h1 style="color: #ccc;">E</h1></li>
+        </ul>
+        <ul >
+        <li class="dot game-square" style="border-top: solid; border-color: black; border-right: solid;"></li>
+        <li class="dot game-square" style="border-right: solid; border-right: solid;"></li>
+        <li class="dot game-square" style="border-bottom: solid; border-color: black; border-right: solid;"></li>
+        <li class="dot game-square" style="border-top: solid; border-color: black; border-right: solid;"></li>
+        <li class="dot game-square" style="border-right: solid; border-right: solid;"></li>
+        <li class="dot game-square" style="border-bottom: solid; border-color: black; border-right: solid;"></li>
+        <li class="dot game-square" style="border-top: solid; border-color: black; border-right: solid;"></li>
+        <li class="dot game-square" style="border-right: solid; border-right: solid;"></li>
+        <li class="dot game-square" style="border-bottom: solid;  border-right: solid; border-color: black; "><h1 style="color: #ccc;">E</h1> </li>
+        </ul>
+
+
+        </div>
+        <br><br>
+        <div class="container ">
+            <div class="row wrapper">
+                <div class="col dot"><h1>1</h1></div>
+                <div class="col dot"><h1>2</h1></div>
+                <div class="col dot"><h1>3</h1></div>
+                <div class="col dot"><h1>4</h1></div>
+                <div class="col dot"><h1>5</h1></div>
+                <div class="col dot"><h1>6</h1></div>
+                <div class="col dot"><h1>7</h1></div>
+                <div class="col dot"><h1>8</h1></div>
+                <div class="col dot"><h1>9</h1></div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+        <script>
+            // var $ = (selector, content) => document.querySelectorAll(`${selector}${content}`)
+            // var col = $(".", "col")
+            var col = $('.col')
+            var fillValue = false; 
+            // console.log(col.text())
+            col.click((e)=>{
+                fillValue = e.target.innerText
+                if(e.target.classList.contains("col")){
+                console.log(fillValue)
+                col.removeClass("selectedValue")
+                
+                e.target.classList.add("selectedValue")
+                }
+                if(e.target.nodeName == 'H1'){
+                    console.log(fillValue)
+                    col.removeClass("selectedValue")
+                    e.target.parentElement.classList.add("selectedValue")
+                }
+            })
+
+            var dot = $('.dot')
+
+            dot.click((e)=>{
+                console.log(e.target.innerText)
+                console.log(e.target.nodeName)
+                console.log(e.target.parentNode)
+                if(fillValue){             
+                    if(e.target.nodeName == "LI"){
+                        e.target.innerHTML = `<h1 style="color: black;">${fillValue}</h1>`
+                    }
+                    if(e.target.nodeName == "H1"){
+                        // for (let i = 0; i < 10; i++) {
+                            // if (e.target.innerHTML == `<h1 style="color: black;">${i}</h1>`){
+                                e.target.style.color = 'black'
+                                $(e.target).text(fillValue)
+                                // e.target.innerText = fillValue
+                            // }
+                        // }
+                    }
+                    // e.target.innerHTML = ''
+                    // e.target.innerHTML = `<h1 style="color: black;">${fillValue}</h1>`
+                }
+            })
+        </script>
+</body>
+</html>
